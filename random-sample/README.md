@@ -25,4 +25,13 @@ The `sample.sample.ps1`-file is for windows, and `random.sample` for linux/mac.
 
 > TIP: modify the scripts to your liking! (you can duplicate them to `random.kick`, `random.hihat` e.g.)
 
+## Linux/Mac
+
+The `random.sample` is a bit more powerful, with extra options:
+
+* multi-folder support: `./random.sample /tmp/out.wav /mnt/samplecd1 /mnt/samplecd2 ...` 
+* keyword-search regex: `SEARCH='(kick|drum|hihat)' ./random.sample /mnt/samplecd1 /mnt/samplecd2 ...`
+* creates an index (`.index` folder) for fast searching across slow network drives 
+* re-index by prefixing env-var: `INDEX=1 ./random.sample ....`
+
 Very powful stuff!
