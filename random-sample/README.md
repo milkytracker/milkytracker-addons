@@ -7,7 +7,7 @@ This addon lets you randomly pick a sample from a folder.
 
 > TIP: press 'redo-filter'-button in the sample-editor to pick another random sample (After having launched the addon once)
 
-<img src="screenshot.jpg"/>
+<img src="screenshot.gif"/>
 
 ## Installation
 
