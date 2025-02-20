@@ -1,5 +1,6 @@
 # 
 # CSOUND instruments/effects
+# https://github.com/milkytracker/milkytracker-addons/tree/master/csound
 #
 CSOUND fx grain buildup     ; csound --omacro:input=%s --omacro:gain=0.%~(volume:0:9:7) csound/fx/grain_buildup.csd -o %s 
 

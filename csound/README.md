@@ -9,7 +9,7 @@
 1. Make sure csound is installed (via your package manager nix/apt-get/homebrew)
 2. Worstcase do a [manual installation](https://csound.com/download.html)
 3. Doublecheck: make sure typing `csound` in your console will work (or set [PATH](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them))
-4. install the 'csound' folder of this repository in the config-directory:
+4. copy the 'csound' folder of this repository to the config-directory:
 
 * LINUX/MAC: `~/.config/milkytracker`
 * WINDOWS:   `C:\Users\<user>\AppData\Roaming\MilkyTracker`

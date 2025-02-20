@@ -1,0 +1,18 @@
+#!/bin/bash
+# usage: ./random.sample in.wav out.wav <dirA> <dirB>
+wavout="$1"
+test -z $SEARCH && SEARCH=".*"
+shift;shift;
+index=".index/$(echo "$1-$2-$3-$4-$5.index" | sed 's|[/ ]|-|g')"  
+
+create_index(){
+  test -d .index || mkdir .index
+  test -f $index && test -z $INDEX && return 0  # set env-var INDEX=1 to enforce indexing
+  echo '[.] creating index to speed up future sessions...(might take a while)'
+  find -L "$@" -type f -size -4M | grep -E '(wav|iff)$' > $index
+}
+
+create_index "$@"
+random="$(shuf -n1 $index)" 
+echo "$random (search:$SEARCH)"
+cp "$random" "$wavout"
