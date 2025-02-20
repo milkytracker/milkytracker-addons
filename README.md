@@ -12,7 +12,7 @@
 
 <a href="random-sample"><img src="random-sample/screenshot.jpg"/></a>
 
-# About addons
+#### About addons
 
 > *samples ARE key-ingredients* for sample-trackers, so an unexplored territory is to **integrate** external tools with the sampler (not filebrowsers):
 
@@ -29,7 +29,7 @@ Also async workflows are possible via the sample editor:
 * right-click: Addon > select your addon (`audacity %s &` e.g.)
 * import later: Addon > import from addon
 
-# Developer info
+#### Developer info
 
 https://github.com/milkytracker/MilkyTracker/tree/master/src/tools/addons.txt
 
