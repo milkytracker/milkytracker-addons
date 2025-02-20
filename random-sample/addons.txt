@@ -1,0 +1,6 @@
+# RANDOM SAMPLE PICKER
+# https://github.com/milkytracker/milkytracker-addons/tree/master/random-sample
+#
+random sample               ; id  && random-sample/random.sample %s random-sample/samples/2020 random-sample/samples/2021
+
+random sample               ; dir && random-sample\random.sample.p1 %s random-sample\samples\2020
