@@ -19,3 +19,4 @@
 7. profit! (now you should see the addons appear)
 
 > for more debugging info run `ADDONS_DEBUG=1 ./milkytracker`
+
