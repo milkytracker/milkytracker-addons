@@ -1,0 +1,6 @@
+#
+# LADSPA PLUGINS
+#
+LADSPA smooth decimate      ; sox %s -D %s rate 44100 ladspa smooth_decimate_1414 %~(rate:1:44100:6000) 0.%~(smooth:1:9:9)
+
+LADSPA fastLookaheadLimiter ; ffmpeg -y -hide_banner -i %s -af "ladspa=fast_lookahead_limiter_1913:fastLookaheadLimiter:%~(input:0:20:20)|-1|%~(release:1:2:1)" %s
