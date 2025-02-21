@@ -1,0 +1,5 @@
+# PUREDATA
+# https://puredata.info
+#
+pd effect                   ; pd -send "in %s" -send "out %s" pd/effect.pd &
+pd synth                    ; pd -send "out %s" pd/synth.pd &
