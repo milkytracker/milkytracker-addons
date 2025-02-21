@@ -19,7 +19,7 @@ promote **personal computing** across all OS'es.<br>
 Addons can be accessed via the sample-editor rightclick context-menu.<br>
 Because *samples ARE key-ingredients* for sample-trackers, so an unexplored territory is to **integrate** external tools with the sampler (not filebrowsers):
 
-* procedural **SAMPLERS**: sample **ANY** synth/app/input into milkytracker
+* **procedural SAMPLERS**: sample **ANY** synth/app/input into milkytracker
 * DIY '**plugin grabber**' by sampling desktop audio
 * **generate** samples using puredata/csound etc
 * **apply** a complex **effect** to a sample

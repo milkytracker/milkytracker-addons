@@ -1,7 +1,7 @@
 # Random samples 
 
 Making music is about spending as least possible time in filebrowsers.<br>
-This addon lets you randomly pick a sample from a folder.
+This **procedural sampler** addon lets you randomly pick a sample from a folder.
 
 ![](screenshot.jpg)
 
