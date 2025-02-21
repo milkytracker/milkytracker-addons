@@ -22,3 +22,5 @@
 
 > for more debugging info run `ADDONS_DEBUG=1 ./milkytracker`
 
+NOTE: our `synth.pd` is incomplete (if you are an avid pd-user, please do a PR with a better startingpoint)
+
