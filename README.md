@@ -45,7 +45,7 @@ Having that said, **parametric cli dialogs** combined with powerful cli-backends
 #### Developer info
 
 Developing addons is much easier compared to developing VST C++ plugins.<br>
-You are encouraged to use **established** DSP-backends:
+You are encouraged to use **scriptable** DSP-backends instead:
 
 * [ffmpeg](https://ffmpeg.org) (effect-filters, [aeval](https://ffmpeg.org/ffmpeg-filters.html#aeval) for processing, [aevalsrc](https://ffmpeg.org/ffmpeg-filters.html#aevalsrc) for synthesis)
 * [SoX](https://sourceforge.net/projects/sox/) (effect-filters, synth for synthesis)
