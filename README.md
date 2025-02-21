@@ -33,16 +33,41 @@ Also async workflows are possible via the sample editor:
 * right-click: Addon > select your addon (`audacity %s &` e.g.)
 * import later: Addon > import from addon
 
-#### Rationale 
+#### Rationale: parametric cli dialogs
 
 MilkyTracker aims to be a small & portable musicproduction app.
-Becoming a plugin-host is simply not on the table, as it would burden its 
-mission with various plugin-format maintenance (and break lowspec devices).
-Having that said, there are various minimalist [cmdline] plugin-host which are perfectly usable by addons♥.
+Becoming a multi-plugin-host is simply not on the table, as it would burden its 
+mission with maintenance of various plugin-format (and break lowspec devices).
+Having that said, **parametric cli dialogs** combined with powerful cli-backends are a perfect match for  addons♥.
+
+<img src="screenshot.png"/>
 
 #### Developer info
 
-https://github.com/milkytracker/MilkyTracker/tree/master/src/tools/addons.txt
+Developing addons is much easier compared to developing VST C++ plugins.<br>
+You are encouraged to use **established** DSP-backends:
+
+* [ffmpeg](https://ffmpeg.org) (effect-filters, [aeval](https://ffmpeg.org/ffmpeg-filters.html#aeval) for processing, [aevalsrc](https://ffmpeg.org/ffmpeg-filters.html#aevalsrc) for synthesis)
+* [SoX](https://sourceforge.net/projects/sox/) (effect-filters, synth for synthesis)
+* [csound](https://csound.org) (insane DSP powerhouse for fx/synths with huge ecosystem)
+
+> Milkytracker addons are **parametric cli dialogs**. Basically, it present a UI dialog, before executing the final cli-cmd:
+
+```shell
+sox %s -D %s speed %~(speed:1:20:1)
+``` 
+
+produces:
+
+<img src="screenshot.png"/>
+
+which produces:
+
+```
+sox /tmp/in.wav -D /tmp/out.wav speed 1
+```
+
+for more info see https://github.com/milkytracker/MilkyTracker/tree/master/src/tools/addons.txt
 
 > please contribute and do a pullrequest, minimum contribution guidelines: 
 
