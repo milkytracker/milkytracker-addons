@@ -8,7 +8,7 @@
 
 <a href="random-sample"><img src="random-sample/screenshot.jpg"/></a>
 
-#### About addons
+## About addons
 
 **Addons** allow for interfacing **with** the operating system ♥.<br>
 This prevents milkytracker to become a monolyth DAW, stay small, and 
@@ -33,7 +33,7 @@ Also async workflows are possible via the sample editor:
 * right-click: Addon > select your addon (`audacity %s &` e.g.)
 * import later: Addon > import from addon
 
-#### Rationale: parametric cli dialogs
+## Rationale: parametric cli dialogs
 
 MilkyTracker aims to be a small & portable musicproduction app.<br>
 Becoming a multi-plugin-host is simply not on the table, as it would burden its 
@@ -42,7 +42,7 @@ Having that said, **parametric cli dialogs** combined with powerful cli-backends
 
 <img src="screenshot.png"/>
 
-#### Developer info
+## Developer info
 
 Developing addons is much easier compared to developing VST C++ plugins.<br>
 You are encouraged to use **scriptable** DSP-backends instead:
