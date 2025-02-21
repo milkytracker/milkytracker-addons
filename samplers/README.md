@@ -17,10 +17,17 @@ The default [addons.txt](https://github.com/milkytracker/MilkyTracker/blob/maste
 2. Scroll to the SAMPLER-section
 3. comment out the ones which don't work for you/your platform
 
+| platform                | suggested sampler dependency      |
+|-------------------------|-----------------------------------|
+| Haiku                   | sox                               |
+| Linux                   | sox, parec, jack\_record, arecord |
+| Mac                     | sox                               |
+| Windows                 | sox                               |
+
 TIPS:
 
-1. linux users probably want to have sox installed (manually or via package manager)
-2. if you're on windows, uncomment the sox/waveaudio one
+1. if you're on windows, you probably want the `sox/waveaudio` below
+2. in case of doubt run `sox` and check the output of `AUDIO DEVICE DRIVERS` to target a device
 
 Some example sampler definitions:
 
