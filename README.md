@@ -35,9 +35,9 @@ Also async workflows are possible via the sample editor:
 
 #### Rationale: parametric cli dialogs
 
-MilkyTracker aims to be a small & portable musicproduction app.
+MilkyTracker aims to be a small & portable musicproduction app.<br>
 Becoming a multi-plugin-host is simply not on the table, as it would burden its 
-mission with maintenance of various plugin-format (and break lowspec devices).
+mission with maintenance of various plugin-format (and break lowspec devices).<br>
 Having that said, **parametric cli dialogs** combined with powerful cli-backends are a perfect match for  addons♥.
 
 <img src="screenshot.png"/>
