@@ -16,6 +16,8 @@
 * LINUX/MAC: `~/.config/milkytracker`
 * WINDOWS:   `C:\Users\<user>\AppData\Roaming\MilkyTracker`
 
+> NOTE: in case of manual install, put the 'ffmpeg' executable here too
+
 5. copy/paste the contents of [addons.txt](./addons.txt) into milkytracker (`Sample Editor > addons > edit addons`) 
 6. make sure to save the texteditor (ctrl+s or command+s)
 7. profit! (now you should see the addons appear)

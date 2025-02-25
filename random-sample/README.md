@@ -11,7 +11,7 @@ This **procedural sampler** addon lets you randomly pick a sample from a folder.
 
 ## Installation
 
-1. copy the 'ladspa' folder of this repository to the config-directory:
+1. copy the 'random-sample' folder of this repository to the config-directory:
 
 * LINUX/MAC: `~/.config/milkytracker`
 * WINDOWS:   `C:\Users\<user>\AppData\Roaming\MilkyTracker`

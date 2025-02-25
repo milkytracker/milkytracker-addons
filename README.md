@@ -2,6 +2,10 @@
 
 <a href="samplers"><img src="samplers/screenshot.jpg"/></a>
 
+<a href="ffmpeg"><img src="ffmpeg/screenshot.jpg"/></a>
+
+<a href="sox"><img src="sox/screenshot.jpg"/></a>
+
 <a href="csound"><img src="csound/screenshot.jpg"/></a>
 
 <a href="ladspa"><img src="ladspa/screenshot.jpg"/></a>
