@@ -16,6 +16,8 @@
 
 ## About addons
 
+> NOTE: addons are enabled for Linux/Mac but not windows [yet]
+
 **Addons** allow for interfacing **with** the operating system ♥.<br>
 This prevents milkytracker to become a monolyth DAW, stay small, and 
 promote **personal computing** across all OS'es.<br>
