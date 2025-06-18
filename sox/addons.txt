@@ -1,1 +1,30 @@
-# nothing here yet
+#
+# SOX FX (+SYNTHS)
+# https://sourceforge.net/projects/sox/
+# make sure you have sox installed (manually/via package manager) otherwise milkytracker ignores these addons
+#
+sox chorus                 ; sox %s -D %s chorus 0.%~(gain_in:0:9:7) 0.%~(gain_out:0:9:9) %~(delay:20:200:55) 0.%~(decay:0:9:4) 0.%~(speed:1:9:2) %~(depth:0:9:2) -t
+sox phaser                 ; sox %s -D %s phaser 0.%~(gain_in:0:9:7) 0.%~(gain_out:0:9:9) %~(delay:0:5:4) 0.%~(decay:0:9:4) 0.%~(speed:1:9:6) -t
+sox freeverb               ; sox %s -D %s gain -1 pad 0 %~(sample_length:1:10:2) reverb %~(reverberance:0:100:50) %~(hf_damping:0:100:50) %~(room_scale:0:100:100) 100 %~(pre_delay:0:500:20) %~(wet:0:10:0) highpass 10
+sox sinc-filter            ; sox %s -D %s sinc -b %~(window_type:0:16:16) -n %~(taps:11:32767:11) %~(freq_min:1:22500:400)-%~(freq_max:1:22500:800)
+sox contrast               ; sox %s -D %s contrast %~(contrast:0:100:50)
+sox repeat                 ; sox %s -D %s repeat %~(repeat:0:20:1)
+sox 4bit                   ; sox %s -b4 %s
+sox spectrogram            ; sox %s -n spectrogram && ffplay spectrogram.png &
+sox speed up               ; sox %s -D %s speed %~(speed:1:20:1)
+sox speed down             ; sox %s -D %s speed 0.%~(speed:1:9:9)
+sox shrink                 ; sox %s -D %s stretch 0.%~(factor:1:9:9) %~(window:1:2048:512)
+sox stretch                ; sox %s -D %s stretch %~(factor:1:9:5) %~(window:1:2048:128)
+sox tremolo                ; sox %s -D %s tremolo %~(speed:1:100:4) %~(depth:0:100:40)
+sox upsample               ; sox %s -D %s upsample %~(factor:1:10:1)
+sox downsample             ; sox %s -D %s downsample %~(factor:1:10:1)
+sox noise: set profile     ; sox %s -n noiseprof noise-profile
+sox noise: remove          ; sox %s -D %s noisered noise-profile 0.%~(noise_reduction:0:9:0)
+sox multiband compress 2   ; sox %s -D %s gain %~(drive:0:30:5q) mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" %~(crossover:100:15000:9000) "0,0.025 -47,-40,-28,-28,-0,-25" gain -%~(attenuate:0:30:2)
+sox multiband compress 5   ; sox %s -D %s gain %~(drive:0:30:3) mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" %~(crossover_1:22:300:100) "0.003,0.05 -47,-40,-34,-34,-17,-33" %~(crossover_2:300:500:400) "0.000625,0.0125 -47,-40,-34,-34,-15,-33" %~(crossover_3:500:3500:1600) "0.0001,0.025 -47,-40,-34,-34,-31,-31,-0,-30" %~(crossover_4:3500:8000:6400) "0,0.025 -47,-40,-28,-28,-0,-25" gain -%~(attenuate:0:30:3)
+sox loudness               ; sox %s -D %s loudness -%~(loudness:0:100:10)
+sox resample               ; sox %s -D -b%~(bits:4:16:8) %s rate %~(samplerate:200:48000:27928) 
+sox synth pluck C4         ; sox -n -c1 -r44100 -b 16 %s synth 0.5 pluck C4 vol 0.2
+sox synth pluckchord       ; sox -n -c1 -r44100 -b 16 %s synth pl G2 pl B2 pl D3 pl G3 pl D4 pl G4 delay 0 .05 .1 .15 .2 .25 remix - fade 0 4 .1 norm -1
+sox synth FM note          ; sox -n -c1 -r44100 -b 16 %s synth 3 sin 960 synth 3 sin fmod 1920 fade l 0 3 2.8 trim 0 1 repeat 2
+sox synth laser            ; sox -n -c1 -r44100 -b 16 %s synth 0.5 sine 200-500 synth 0.5 sine fmod 700-100
