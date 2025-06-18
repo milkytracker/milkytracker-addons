@@ -14,4 +14,4 @@ ffmpeg expander             ; ffmpeg -y -hide_banner -i %s -af "agate=mode=upwar
 ffmpeg compand              ; ffmpeg -y -hide_banner -i %s -af compand %s
 ffmpeg crystalizer          ; ffmpeg -y -hide_banner -i %s -af crystalizer=i=1 %s
 ffmpeg denoise              ; ffmpeg -y -hide_banner -i %s -af "afftdn=nr=%~(reduction:1:97:10):nf=-%~(floor_noise:20:80:50):bm=%~(band_multiply:1:5:1):gs=%~(gain_smooth:0:50:0)" %s
-ffplay vibrato              ; ffmpeg -y -hide_banner -i %s -af "vibrato=f=%~(frequency:0:20000:10):d=0.%~(depth:1:99:5)" %s
+ffmpeg vibrato              ; ffmpeg -y -hide_banner -i %s -af "vibrato=f=%~(frequency:0:20000:10):d=0.%~(depth:1:99:5)" %s
