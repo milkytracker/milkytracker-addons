@@ -14,6 +14,8 @@
 
 <a href="pd"><img src="pd/screenshot.jpg"/></a>
 
+<a href="flite"><img src="flite/screenshot.jpg"/></a>
+
 ## About addons
 
 > NOTE: addons are enabled for Linux/Mac but not windows [yet]

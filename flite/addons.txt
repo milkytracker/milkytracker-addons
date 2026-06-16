@@ -1,0 +1,10 @@
+# FLITE (Festival Lite Text to Speech)
+# http://www.festvox.org/flite/
+#
+# note: replace 'zenity' with 'yad' based on which is installed
+#
+text2speech slt-voice       ; echo %s; flite -voice slt -t "$(zenity --entry --title="FLite voice synthesizer" --text="enter sentence")" -o %s
+text2speech awb-voice       ; echo %s; flite -voice awb -t "$(zenity --entry --title="FLite voice synthesizer" --text="enter sentence")" -o %s
+text2speech rms-voice       ; echo %s; flite -voice rms -t "$(zenity --entry --title="FLite voice synthesizer" --text="enter sentence")" -o %s
+text2speech kal16-voice     ; echo %s; flite -voice kal16 -t "$(zenity --entry --title="FLite voice synthesizer" --text="enter sentence")" -o %s
+
